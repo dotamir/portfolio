@@ -33,7 +33,7 @@ export default function Hero() {
 	return (
 		<Section classProp={`${hero.section}`}>
 			<Container spacing={'VerticalXXXL'}>
-				<TypeAnimation className={`${hero.preHeader}`}
+				{/* <TypeAnimation className={`${hero.preHeader}`}
 					sequence={[
 						content.intro.startDelay,
 						() => { setTypingStatus('typing') },
@@ -49,7 +49,7 @@ export default function Hero() {
 					deletionSpeed={content.intro.deletionSpeed}
 					wrapper={content.intro.wrapper}
 					repeat={Infinity}
-				/>
+				/> */}
 				<section>
 					<h1 className={hero.header}>
 						{content.header.name}
@@ -61,16 +61,20 @@ export default function Hero() {
 				<section>
 					<p className={`${hero.primaryBright} subtitle ${space(["verticalLrg"])}`}>
 						{ content.paragraph }
-					</p>					
+					</p>
 				</section>
 				<section>
 					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = 'mailto:hello@andrewnelson.net' } >
+						onClick={() => window.location = 'mailto:zaahraajaamaali@gmail.com' } >
 						{content.buttons.primary.title}
 					</button>
 					<button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open("https://www.linkedin.com/in/--andrewnelson/", "_blank") } >
+						onClick={() => window.open("https://www.linkedin.com/in/zahra-jamali-64749a255/", "_blank") } >
 						{content.buttons.secondary.title}
+					</button>
+					<button className={`button ${button.secondary} leaveSite`}
+						onClick={() => window.open("https://dribbble.com/zaaraajml", "_blank")} >
+						{content.buttons.dribbble.title}
 					</button>
 				</section>
 			</Container>
